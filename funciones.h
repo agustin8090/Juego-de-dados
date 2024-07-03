@@ -78,9 +78,15 @@ void ponerCero(int v[], int tam){
 
 void entreTurnos (int ron, int punTotal, string &nombreJ1){
     if (punTotal<100){
+    cout<< "------------------------------------"<<endl;
     cout << "RONDA N " << ron+1 << endl;
+    cout<< "------------------------------------"<<endl;
     cout << "PROXIMO TURNO: " << nombreJ1 << endl;
+    cout<< "------------------------------------"<<endl;
+
     cout << "PUNTAJE: " << punTotal << endl;
+    cout<< "------------------------------------"<<endl;
+
     return;
     }
     else {
@@ -127,6 +133,40 @@ int resultadoCombinaciones (int v[], int tam){
 
         }
     }
+
+cout << endl << endl << "---------- |   SUMA DE DADOS  | ----------"<< endl;
+    return valor;
+}
+
+void entreTurnosJ2 (int ron, int punTotalJ1, string &nombreJ1, int punTotalJ2, string &nombreJ2){
+    if (punTotalJ1<100&& punTotalJ2<100){
+    cout<< "------------------------------------"<<endl;
+    cout << "RONDA N " << ron << endl;
+    cout<< "------------------------------------"<<endl;
+    cout << "JUGADOR: " << nombreJ1 << endl;
+    cout<<  "PUNTAJE: "<< punTotalJ1<<endl;
+    cout<< "------------------------------------"<<endl;
+
+    cout << "JUGADOR: " << nombreJ2 << endl;
+    cout<<  "PUNTAJE: "<< punTotalJ2<<endl;
+    cout<< "------------------------------------"<<endl;
+
+    return;
+    }
+    else if(punTotalJ1>punTotalJ2) {
+        cout << "--------------- | GANASTE! "<<nombreJ1<< "| ---------------" <<endl;
+        cout << "­­­ LLEGASTE A " << punTotalJ1 << " puntos en " << ron << " RONDAS" << endl;
+        cout << "FELICIDADES" << endl << "FIN DEL JUEGO" << endl;
+        return;
+    }else{    cout << "--------------- | GANASTE! "<<nombreJ2<< "| ---------------" <<endl;
+        cout << "­­­ LLEGASTE A " << punTotalJ2 << " puntos en " << ron << " RONDAS" << endl;
+        cout << "FELICIDADES" << endl << "FIN DEL JUEGO" << endl;
+        return;
+    }
+
+}
+
+#endif // FUNCIONES_H_INCLUDED
 
 cout << endl << endl << "---------- |   SUMA DE DADOS  | ----------"<< endl;
     return valor;
